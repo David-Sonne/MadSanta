@@ -21,7 +21,7 @@ func _on_restart_pressed() -> void:
 
 
 func _on_options_pressed() -> void:
-	get_tree().paused = false
+	get_parent().change_scenes(Globals.SETTINGS)
 	pass
 
 func _on_exit_level_pressed() -> void:

@@ -76,7 +76,8 @@ func intro_text():
 	start_text_sequence(intro_text)
 
 func change_scenes(sceneName: String) -> void:
-	$PauseMenu.visible = sceneName == Globals.PAUSED and Globals.state == Globals.PLAYING
+	Globals.previousMenu = Globals.state
+	$PauseMenu.visible = sceneName == Globals.PAUSED and Globals.state in [Globals.PLAYING, Globals.SETTINGS]
 	$MainMenu.visible = sceneName == Globals.MAIN_MENU
 	$LevelSelection.visible = sceneName == Globals.LEVEL_SELECTION
 	$SettingsMenu.visible = sceneName == Globals.SETTINGS

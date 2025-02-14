@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://ddk2vh04b5n1c"]
+[gd_scene load_steps=27 format=3 uid="uid://ddk2vh04b5n1c"]
 
 [ext_resource type="Script" path="res://Scripts/ui.gd" id="1_uhene"]
 [ext_resource type="FontFile" uid="uid://cd2d0made820k" path="res://Resources/Fonts/Default.ttf" id="1_wsnms"]
@@ -314,6 +314,7 @@ visible = false
 modulate = Color(1, 1, 1, 0)
 
 [node name="SettingsMenu" parent="UI" instance=ExtResource("10_on1yh")]
+process_mode = 3
 visible = false
 
 [node name="Animations" type="AnimationPlayer" parent="UI"]

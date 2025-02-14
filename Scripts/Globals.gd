@@ -36,6 +36,7 @@ var level_buttons = []
 var current_level = 1
 var enemies_in_level = 0
 var enemies_killed = 0
+var previousMenu = ""
 
 #Savable data
 var unlocked_level = 1
@@ -55,7 +56,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pause") && Globals.state == Globals.PLAYING:
 		change_scenes(Globals.PAUSED)
-		get_tree().paused = true 
+		get_tree().paused = true
 	if Input.is_action_just_pressed("ESC"):
 		get_tree().quit()
 	if Input.is_action_just_pressed("F11"):
